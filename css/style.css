@@ -1,0 +1,330 @@
+/* Estilo para a primeira seção */
+.secao1 {
+    background-color: rgb(0, 0, 0, 0.9);
+    /* Cor de fundo para a primeira seção */
+    margin-bottom: 50px;
+    /* Espaço entre as seções */
+    max-width: 100%;
+    border-radius: 50px;
+}
+.secao1 h2 {
+    font-size: 50px;
+}
+.secao2 h2 {
+    font-size: 50px;
+}
+.secao3 h2 {
+    font-size: 50px;
+}
+.secao4 h2 {
+    font-size: 50px;
+}
+.secao1 p {
+    font-size: 20px;
+}
+.secao2 p {
+    font-size: 20px;
+}
+.secao3 p {
+    font-size: 20px;
+}
+.secao4 p {
+    font-size: 20px;
+}
+
+/* Estilo para a segunda seção */
+.secao2 {
+    background-color: rgb(0, 0, 0, 0.9);
+    /* Cor de fundo para a segunda seção */
+    margin-bottom: 50px;
+    /* Espaço entre as seções */
+    border-radius: 50px;
+}
+
+/* Estilo para a terceira seção */
+.secao3 {
+    background-color: rgb(0, 0, 0, 0.9);
+    /* Cor de fundo igual à primeira seção */
+    margin-bottom: 50px;
+    /* Espaço entre as seções */
+    border-radius: 50px;
+}
+
+/* Estilo para a última seção */
+.secao4 {
+    background-color: rgb(0, 0, 0, 0.9);
+    /* Cor de fundo igual à segunda seção */
+    margin-bottom: 50px;
+    /* Espaço entre as seções */
+    border-radius: 50px;
+}
+
+/* Estilos globais */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: 	#e8e8e0;
+    /* Cor de fundo mais leve */
+    overflow-x: hidden;
+    /* Para não ficar atrás da barra de rolagem horizontal */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background: #111111;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #B68F68;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-toggle {
+    color: #B68F68;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #B68F68;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 22px;
+}
+
+.menu a:hover {
+    background: #C8B1A3;
+    color: white;
+    transition: background 0.25s, color 0.25s;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #111111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    margin-top: 80px;
+    /* Margem superior para evitar sobreposição com o cabeçalho */
+    padding: 20px;
+    /* Espaçamento interno */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite que os elementos quebrem para a próxima linha */
+}
+
+/* Estilos para as seções */
+section {
+    padding: 50px 0;
+    /* Espaçamento interno superior e inferior */
+}
+
+h1,
+h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* Margem inferior para os títulos */
+}
+
+p {
+    font-size: 1.2em;
+    /* Tamanho da fonte dos parágrafos */
+    line-height: 1.6;
+    /* Altura da linha */
+}
+
+img {
+    border-radius: 60px;
+    /* Bordas arredondadas */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: #111111;
+    /* Cor de fundo do rodapé */
+    color: #B68F68;
+    /* Cor do texto do rodapé */
+    text-align: center;
+    /* Alinhamento do texto */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin-top: 20px;
+    /* Margem superior */
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.redes-socias {
+    margin-bottom: 20px;
+    /* Margem inferior */
+}
+
+.social1,
+.social2,
+.social3,
+.social4 {
+    margin: 0 10px;
+    /* Margem dos ícones de mídia social */
+    display: inline-block;
+    /* Exibe os ícones em linha */
+    font-size: 24px;
+    /* Tamanho da fonte dos ícones */
+    color: #B68F68;
+    /* Cor dos ícones */
+}
+
+.social1:hover {
+    color: green;
+}
+
+.social3:hover {
+    color: #eb7138;
+    /* Cor dos ícones ao passar o mouse */
+}
+
+footer p {
+    margin: 0;
+    /* Remove a margem padrão do parágrafo */
+}
+
+/* Estilos para as imagens das seções */
+.container .image-container img {
+    max-width: 100%;
+    /* Tornando as imagens responsivas */
+    height: auto;
+    /* Altura automática */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+}
+
+/* Estilos para as seções */
+section {
+    padding: 50px 20px;
+    /* Ajustando o espaçamento interno */
+}
+
+section h2, section p {
+    color: #B68F68;
+}
+
+/* Posicionamento da última seção */
+.container:last-child {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Inverte a ordem dos elementos */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+}
+
+.container:last-child .image-container {
+    margin-left: auto;
+    /* Alinha a imagem à direita */
+    margin-right: 20px;
+    /* Adiciona um espaço entre a imagem e o texto */
+}
+
+.container:last-child h2,
+.container:last-child p {
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-right: 20px;
+    /* Adiciona um espaço entre o texto e a imagem */
+}
+
+/* Estilos para o carrossel */
+.carrossel-personalizado {
+    width: 100vh;
+    /* Defina uma largura de 90% da tela */
+    max-width: 1100px;
+    /* Defina um máximo de 1200px */
+    margin: 0 auto 40px;
+    /* Centralize o carrossel */
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que transborde do carrossel */
+    border-radius: 20px;
+}
+
+.carrossel-personalizado .carousel-item img {
+    object-fit: cover;
+    /* Cubra o contêiner com a imagem */
+    width: 100%;
+    /* Defina a largura para ocupar 100% do contêiner */
+    height: 70vh;
+    /* Defina a altura como 70% da altura da tela */
+    border-radius: 20px;
+    /* Mantenha as bordas arredondadas */
+}
+
+.carrossel {
+    background-color: #000000;
+    /* Cor de fundo semi-transparente */
+    max-width: 1200px;
+    /* Largura máxima do carrossel */
+    margin: 0 auto 50px;
+    /* Centralizar na página com uma margem inferior de 50px */
+    padding: 20px;
+    /* Adicionar algum espaço interno */
+    border-radius: 20px;
+    max-height: 1200px;
+}
+.formtit {
+    font-family: sans-serif;
+    font-size: 230%;
+}

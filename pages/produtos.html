@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JB & J BALÕES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #e8e8e0;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tabela {
+            background-color: #f0f0f0;
+        }
+
+        header {
+            width: 100%;
+            background: #111111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #B68F68;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            color: #B68F68;
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu a {
+            color: #B68F68;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 22px;
+        }
+
+        .menu a:hover {
+            background: #C8B1A3;
+            color: white;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #111111;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .menu li {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+
+        footer {
+            width: 100%;
+            background: #111111;
+            box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.3);
+            text-align: center;
+            color: #B68F68;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        .redes-sociais {
+            margin-bottom: 20px;
+        }
+
+        .social1,
+        .social2,
+        .social3,
+        .social4 {
+            margin: 0 10px;
+            display: inline-block;
+            font-size: 24px;
+            color: #B68F68;
+        }
+
+        .social3:hover {
+            color: orange;
+        }
+
+        .tabelaTitulo {
+            padding: 2vh;
+        }
+        #grid-secao{
+            color: #fff;
+            margin-top: 10px;
+            background-color: black;
+            text-align: center;
+        }
+        .grid div{
+            background-color: #B68F68;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3px;
+            text-align: center;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        .divisao{
+            background-color: #B68F68;
+            text-align: left;
+        }
+        .goodvibe{
+            background-color: #000;
+            text-align: left;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        header{
+            background-color: #000;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 25px;
+            text-align: right;
+        }
+        .historia{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.6rem;
+            color: #fff;
+        }
+        .link{
+            font-size: 15px;
+        }
+        .social1:hover {
+            color: green;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body class="tabela">
+
+    <div id="topo"></div>
+    
+    <header>
+        <div class="logo">JB & J BALÕES</div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div>
+                <ul class="menu" id="menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="endereco.html">Endereço</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <body class="tabela">
+        <h2 class="tabelaTitulo">Tabela de Preços dos Produtos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Produto</th>
+                    <th>Preço</th>
+                    <th>Disponibilidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Base de mesas de bolo </td>
+                    <td> R$85,00</td>
+                    <td>Disponivel</td>
+                </tr>
+                <tr>
+                    <td>02 </td>
+                    <td>Base de mesas</td>
+                    <td> R$ 78,00</td>
+                    <td>Disponivel</td>
+                </tr>
+                <br>
+                <tr>
+                    <td>03</td>
+                    <td>Base de números</td>
+                    <td>R$ 95,00</td>
+                    <td>Disponivel</td>
+                </tr>
+                <br>
+                <tr>
+                    <td>04</td>
+                    <td>Kit temático </td>
+                    <td>R$ 140,00</td>
+                    <td>Disponível</td>
+                </tr>
+                <br>
+                <tr>
+                    <td>05</td>
+                    <td>Topo de bolo</td>
+                    <td> R$ 48,00</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>5 rosas eterna + 1 bombom </td>
+                    <td>R$ 78,00</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>6 Bombons + 1 Rosa eterna </td>
+                    <td>$55,00</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>19 bombons + 1 Mini Balão </td>
+                    <td>$100,00</td>
+                    <td>Disponível</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>Buque + mini balão personalizado </td>
+                    <td> R$100,00</td>
+                    <td>Disponível</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br><br>
+        <section class="secao" id="grid-secao">
+            <div class="grid">
+                <div><a href="#Base de mesas de bolo"><img src="image/base_de_bolo1.jpeg" alt="Ver imagem Base de mesas de bolo"></a> </div>
+    
+                <div><a href="#Base de mesas"><img src="image/base_de_mesa2.jpeg" alt="Ver imagem Base de mesas "></a> </div>
+    
+                <div><a href="#Base de números"><img src="image/base_de_numero3.jpeg" alt="Ver imagem Base de números"></a> </div>
+    
+                <div><a href="#Kit temático "><img src="image/kit_tematico4.jpeg" alt="Ver imagem Kit temático "></a> </div>
+    
+                <div><a href="#Topo de bolo"><img src="image/topo_de_bolo5.jpeg" alt="Ver imagem Topo de bolo"></a> </div>
+    
+                <div><a href="#5 rosas eterna + 1 bombom"><img src="image/buque6.jpeg" alt="Ver imagem 5 rosas eterna + 1 bombom"></a> </div>
+
+                <div><a href="#6 Bombons + 1 Rosa eterna"><img src="image/mini.jpeg" alt="6 Bombons + 1 Rosa eterna"></a> </div>
+
+                <div><a href="#19 bombons + 1 Mini Balão"><img src="image/19bombons.jpeg" alt="Ver imagem 19 bombons + 1 Mini Balão"></a> </div>
+
+                <div><a href="#Buque + mini balão personalizado"><img src="image/mini_buque7.jpeg" alt="Ver imagem Buque + mini balão personalizado"></a> </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="Base de mesas de bolo">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/base_de_bolo1.jpeg" alt="Ver imagem Base de mesas de bolo"></a>
+            </nav>
+            <p class="info"><b>Base de mesas de bolo</b>:Base de mesas de  bolo 45 cm a 50cm  R$85,00.</p>
+        </section>
+    
+        <section id="Base de mesas">
+            <nav class="divisao">
+                <a href="#topo"> <img src="image/base_de_mesa2.jpeg" alt="Ver imagem Base de mesas "></a>
+            </nav>
+            <p class="info"><b>Base de mesas </b>>R$ 78,00 balões metalizado de 45cm.</p>
+        </section>
+    
+        <section id="Base de números">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/base_de_numero3.jpeg" alt="Ver imagem Base de números "></a>
+            </nav>
+            <p class="info"><b>Base de números</b>:Base de números de 40 cm duplo R$ 95,00 até 50cm de altura ( 1 número R$85,00).</p>
+        </section>
+    
+        <section id="Kit temático ">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/kit_tematico4.jpeg" alt="Ver imagem Kit temático "></a>
+            </nav>
+            <p class="info"><b>Kit temático </b>: Kit temático R$ 140,00 (45 cm até 60 cm).</p>
+        </section>
+    
+        <section id="Topo de bolo">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/topo_de_bolo5.jpeg" alt="Ver imagem Topo de bolo"></a> 
+            </nav>
+            <p class="info"><b>Topo de bolo</b>: Topo de bolo ou multiuso pra efeitar presentes e mesas R$ 48,000.</p>
+        </section>
+    
+        <section id="5 rosas eterna + 1 bombom">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/buque6.jpeg" alt="Ver imagem 5 rosas eterna + 1 bombom"></a>
+            </nav>
+            <p class="info"><b>5 rosas eterna + 1 bombom</b>: 5 rosas eterna + 1 bombom R$ 78,00.
+                Se for com Ferrero ou raffaello R$ 83,00.</p>
+        </section>
+
+        <section id="6 Bombons + 1 Rosa eterna">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/mini.jpeg" alt="Ver imagem 6 Bombons + 1 Rosa eterna"></a>
+            </nav>
+            <p class="info"><b>6 Bombons + 1 Rosa eterna</b>: 6 Bombons + 1 Rosa eterna $55,00.</p>
+        </section>
+
+        <section id="19 bombons + 1 Mini Balão">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/19bombons.jpeg" alt="Ver imagem 19 bombons + 1 Mini Balão"></a>
+            </nav>
+            <p class="info"><b>19 bombons + 1 Mini Balão</b>: 19 bombons + 1 Mini Balão $100,00.</p>
+        </section>
+
+        <section id="Buque + mini balão personalizado">
+            <nav class="divisao">
+                <a href="#topo"><img src="image/mini_buque7.jpeg" alt="Ver imagem Buque + mini balão personalizado"></a>
+            </nav>
+            <p class="info"><b>Buque + mini balão personalizado</b>: Buque + mini balão personalizado R$100,00.</p>
+        </section>
+        <br><br>
+        <p><b>Para ver mais produtos, entre em contato conosco!</b></p>
+
+        
+
+
+        <footer>
+            <div class="redes-sociais">
+                <a href="https://wa.me/+55" target="_blank" class="social1"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/jbjballon?igsh=Y2Q3bm5qeDE0ZWE=" target="_blank" class="social3"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; JB & J BALÕES</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menu-toggle');
+                const menu = document.getElementById('menu');
+                menuToggle.addEventListener('click', function () {
+                    menu.classList.toggle('active');
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #e8e8e0;
+            overflow-x: hidden;
+        }
+
+
+        .map,
+        footer {
+            padding: 20px;
+        }
+
+        .text-container {
+            padding: 20px;
+            text-align: left;
+            max-width: 1400px;
+            width: 100%;
+            margin: auto;
+            background-color: rgb(0, 0, 0, 0.8);
+            border-radius: 50px;
+        }
+
+        .text-container p {
+            color: #B68F68;
+        }
+
+        .info h1 {
+            text-align: center;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .button {
+            margin: 0;
+            padding: 15px 20px;
+            border: none;
+            outline: none;
+            background-color: #151515;
+            color: #eee;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease-out;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-span {
+            color: #aaa;
+        }
+
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+
+            .info,
+            .map,
+            footer {
+                padding: 10px;
+            }
+
+            .text-container {
+                font-size: 14px;
+            }
+
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            height: 60vh;
+            /* Ajusta a altura do contêiner */
+            padding: 50px;
+            /* Remove o padding do contêiner */
+        }
+
+        .map-container iframe {
+            position: relative;
+            width: 65%;
+            /* Ajusta a largura do mapa */
+            height: 100%;
+            /* Ajusta a altura do mapa */
+            border: 0;
+            margin: 0 auto;
+            /* Centraliza o iframe */
+            display: block;
+            /* Garante que o iframe seja um bloco */
+            border-radius: 50px;
+        }
+
+        header {
+            width: 100%;
+            background: #111111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            color: #B68F68;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .menu-toggle {
+            color: #B68F68;
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu a {
+            color: #B68F68;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 22px;
+        }
+
+        .menu a:hover {
+            background: #C8B1A3;
+            color: white;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #111111;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .menu li {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            width: 100%;
+            background: #111111;
+            /* Cor de fundo do rodapé */
+            color: #B68F68;
+            /* Cor do texto do rodapé */
+            text-align: center;
+            /* Alinhamento do texto */
+            padding: 20px;
+            /* Espaçamento interno */
+            margin-top: 20px;
+            /* Margem superior */
+        }
+
+        .redes-socias {
+            margin-bottom: 20px;
+            /* Margem inferior */
+        }
+
+        .social1,
+        .social2,
+        .social3,
+        .social4 {
+            margin: 0 10px;
+            /* Margem dos ícones de mídia social */
+            display: inline-block;
+            /* Exibe os ícones em linha */
+            font-size: 24px;
+            /* Tamanho da fonte dos ícones */
+            color: #B68F68;
+            /* Cor dos ícones */
+        }
+
+        .social3:hover {
+            color: orange;
+            /* Cor dos ícones ao passar o mouse */
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social1:hover {
+            color: green;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">JB & J BALÕES</div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="menu" id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="endereco.html">Endereço</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br>
+    <!--Paragrafo com informações-->
+    <div class="info">
+        <h1>Aqui se encontra nosso endereço físico</h1>
+        <div class="text-container">
+            <b>
+                <p>Proprietárias: Flávia Guimarães e Camila Oliveira.</p>
+                <p>Nome do estabelecimento: JB e J Ballon.</p>
+                <p>AVENIDA URUGUAI - 250, SALA 208</p>
+                <p>BELO HORIZONTE / MINAS GERAIS</p>
+                <p>CEP: 30310300</p>
+                <p>TELEFONE PARA CONTATO: (31) 996169623 </p>
+                <p>EMAIL PARA CONTATO: flaviagcg50@gmail.com </p>
+                <p>HORÁRIO DE ATENDIMENTO: TERÇA A SÁBADO 08:00 AS 18:00</p>
+            </b>
+        </div>
+    </div>
+    <!--Endereço-->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.3977587964832!2d-43.93593322349156!3d-19.949767838926842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699cd4cc858d7%3A0xdf926a96df321ab2!2sAv.%20Uruguai%2C%20250%20-%20Sion%2C%20Belo%20Horizonte%20-%20MG%2C%2030315-600!5e0!3m2!1spt-BR!2sbr!4v1714480832168!5m2!1spt-BR!2sbr"
+            width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+
+    <div class="botoes">
+        <button class="button"
+            onclick="window.open('https:www.google.com/maps/place/Av.+Uruguai,+250+-+Sion,+Belo+Horizonte+-+MG,+30315-600/@-19.949773,-43.933358,17z/data=!4m6!3m5!1s0xa699cd4cc858d7:0xdf926a96df321ab2!8m2!3d-19.9497729!4d-43.9333583!16s%2Fg%2F11bw43zgj9?hl=pt-BR&entry=ttu')">
+            Abrir mapa amplificado
+            <span class="button-span"></span>
+        </button>
+    </div>
+
+
+
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://wa.me/+55" target="_blank" class="social1"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/jbjballon?igsh=Y2Q3bm5qeDE0ZWE=" target="_blank" class="social3"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; JB & J BALÕES</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
